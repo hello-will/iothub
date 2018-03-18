@@ -12,6 +12,7 @@
         <module>broker</module>
         <module>utils</module>
         <module>api</module>
+        <module>pubsub</module>
     </modules>
 
     <properties>
@@ -24,6 +25,18 @@
             <dependency>
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-core</artifactId>
+                <version>${vertx.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-web</artifactId>
+                <version>${vertx.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-mqtt</artifactId>
                 <version>${vertx.version}</version>
             </dependency>
 
