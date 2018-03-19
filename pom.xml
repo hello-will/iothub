@@ -10,9 +10,11 @@
     <version>0.1</version>
     <modules>
         <module>broker</module>
+        <module>pusher</module>
+        <module>restapi</module>
+        <module>storager</module>
+        <module>trigger</module>
         <module>utils</module>
-        <module>api</module>
-        <module>pubsub</module>
     </modules>
 
     <properties>
