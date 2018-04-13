@@ -1,0 +1,64 @@
+syntax="proto3";
+
+option java_multiple_files = true;
+option java_package = "iothub.rpc";
+
+message Authentication
+{
+    string hub      = 1;
+    string endpoint = 2;
+    string token    = 3;
+}
+
+message AuthenticationResp
+{
+    int32  err = 1;
+    string str = 2;
+}
+
+message SubscribeTopic
+{
+    string topic = 1;
+    int32  qos   = 2;
+}
+
+message Subscribe
+{
+    int32                   msgid    = 1;
+    string                  hub      = 2;
+    string                  endpoint = 3;
+    repeated SubscribeTopic topics   = 4;
+}
+
+message SubscribeResp
+{
+    int32          msgid = 1;
+    repeated int32 qoses = 2;
+}
+
+message Unsubscribe
+{
+    int32           msgid    = 1;
+    string          hub      = 2;
+    string          endpoint = 3;
+    repeated string topics   = 4;
+}
+
+message Publish
+{
+    string hub      = 1;
+    string endpoint = 2;
+    string topic    = 3;
+    bytes  payload  = 4;
+    int32  qos      = 5;
+}
+
+message TopicMessage
+{
+    string hub      = 1;
+    string endpoint = 2;
+    string topic    = 3;
+    bytes  payload  = 4;
+    int32  qos      = 5;
+}
+
